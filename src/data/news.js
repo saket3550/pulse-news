@@ -1,0 +1,15 @@
+export const CATEGORIES = ["world", "business", "technology", "sports", "science"];
+
+const body = (s) => `${s}\n\nThis is sample copy for the demo app. Replace the data in src/data/news.js, or connect a live news API in src/services/newsService.js.\n\nAnalysts say developments are expected over the coming days, and further updates will be published as they arrive.`;
+const ago = (m) => new Date(Date.now() - m * 60000).toISOString();
+
+export const ARTICLES = [
+  { id: "1", title: "Regional leaders agree on emergency flood relief package", summary: "Ministers approved funding for evacuation and rebuilding after record rainfall.", body: body("Leaders from nine countries met overnight and agreed on a shared relief fund for flood-hit regions."), category: "world", source: "Pulse Wire", publishedAt: ago(8), breaking: true },
+  { id: "2", title: "Central bank holds rates steady, signals cuts next quarter", summary: "Markets rallied after the surprise guidance on inflation.", body: body("The central bank kept its benchmark rate unchanged but pointed to easing price pressures."), category: "business", source: "Market Desk", publishedAt: ago(25), breaking: true },
+  { id: "3", title: "Chipmaker unveils processor built for on-device AI", summary: "The new chip promises faster local models with lower power draw.", body: body("The processor targets laptops and phones, running language models without a cloud connection."), category: "technology", source: "Tech Ledger", publishedAt: ago(70), breaking: false },
+  { id: "4", title: "Underdogs reach the final after dramatic penalty shootout", summary: "A late equaliser sent the semi-final to penalties.", body: body("The goalkeeper saved two spot-kicks as the crowd erupted."), category: "sports", source: "Sports Daily", publishedAt: ago(120), breaking: false },
+  { id: "5", title: "Telescope team detects water vapour on distant exoplanet", summary: "The atmosphere reading is among the clearest yet for a rocky world.", body: body("Researchers used infrared spectra to identify the signature of water vapour."), category: "science", source: "Science Today", publishedAt: ago(180), breaking: false },
+  { id: "6", title: "Port strike ends after overnight deal with unions", summary: "Cargo operations are expected to resume by morning.", body: body("Both sides accepted a revised wage agreement, ending a four-day standoff."), category: "business", source: "Market Desk", publishedAt: ago(240), breaking: false },
+  { id: "7", title: "Open-source group releases major privacy update for browsers", summary: "The update blocks cross-site tracking by default.", body: body("Developers say the change will roll out to all users within a week."), category: "technology", source: "Tech Ledger", publishedAt: ago(300), breaking: false },
+  { id: "8", title: "Climate summit opens with pledge to cut methane emissions", summary: "Over 80 nations signed the opening declaration.", body: body("Delegates called the pledge a first step and promised binding targets later."), category: "world", source: "Pulse Wire", publishedAt: ago(360), breaking: false },
+];
